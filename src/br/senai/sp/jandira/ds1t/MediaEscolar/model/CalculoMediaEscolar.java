@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CalculoMediaEscolar {
     String nomeAluno;
-    String aprovacao;
+    String situacao;
     double nota1;
     double nota2;
     double nota3;
@@ -17,16 +17,16 @@ public class CalculoMediaEscolar {
         System.out.print("Ola! Por favor escreva o nome do aluno: ");
         nomeAluno = leitor.nextLine();
 
-        System.out.print("Ótimo, agora escreva a nota 1: ");
+        System.out.print("Ótimo, agora digite a primeira nota: ");
         nota1 = leitor.nextDouble();
 
-        System.out.print("Ótimo, agora escreva a nota 2: ");
+        System.out.print("Ótimo, agora digite a segunda nota: ");
         nota2 = leitor.nextDouble();
 
-        System.out.print("Ótimo, agora escreva a nota 3: ");
+        System.out.print("Ótimo, agora digite a terceira nota: ");
         nota3 = leitor.nextDouble();
 
-        System.out.print("Ótimo, agora escreva a nota 4: ");
+        System.out.print("Ótimo, agora digite a quarta nota: ");
         nota4 = leitor.nextDouble();
 
         calcularMedia();
@@ -35,9 +35,9 @@ public class CalculoMediaEscolar {
     public void calcularMedia(){
         mediaFinal = (nota1 + nota2 + nota3 + nota4) / 4;
         if (mediaFinal >= 5){
-            aprovacao = "Aprovado";
+            situacao = "Aprovado";
         }else {
-            aprovacao = "Reprovado";
+            situacao = "Reprovado";
         }
          exibirResultados();
     }
@@ -58,7 +58,7 @@ public class CalculoMediaEscolar {
         System.out.println(" ");
         System.out.println("******************************");
         System.out.println(" ");
-        System.out.println("Situação: " + aprovacao);
+        System.out.println("Situação: " + situacao);
 
     }
 }

@@ -33,13 +33,19 @@ public class CalculoMediaEscolar {
     }
 
     public void calcularMedia(){
-        mediaFinal = (nota1 + nota2 + nota3 + nota4) / 4;
+        double somaDasNotas = nota1 + nota2 + nota3 + nota4;
+        mediaFinal = somaDasNotas / 4;
+
+         determinarSituacao();
+    }
+
+    public void determinarSituacao(){
         if (mediaFinal >= 5){
             situacao = "Aprovado";
         }else {
             situacao = "Reprovado";
         }
-         exibirResultados();
+        exibirResultados();
     }
 
     public void exibirResultados(){

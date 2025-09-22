@@ -14,7 +14,7 @@ public class CalculoMediaEscolar {
     public void receberDados(){
         Scanner leitor = new Scanner(System.in);
 
-        System.out.print("Ola! Por favor escreva o nome do aluno: ");
+        System.out.print("Ola! Por favor escreva o nome do aluno(a): ");
         nomeAluno = leitor.nextLine();
 
         System.out.print("Ótimo, agora digite a primeira nota: ");
@@ -41,9 +41,12 @@ public class CalculoMediaEscolar {
 
     public void determinarSituacao(){
         if (mediaFinal >= 5){
-            situacao = "Aprovado";
-        }else {
-            situacao = "Reprovado";
+            situacao = "Aprovado(a)!!";
+
+        } else if (mediaFinal >= 3) {
+            situacao = "De recuperação!!";
+        } else{
+            situacao= "Reprovado(a)!!";
         }
         exibirResultados();
     }
@@ -55,16 +58,15 @@ public class CalculoMediaEscolar {
         System.out.println(" ------- MÉDIA ESCOLAR -------");
         System.out.println("******************************");
         System.out.println(" ");
-        System.out.println("Aluno: " + nomeAluno);
-        System.out.println("Nota 1: " + nota1);
-        System.out.println("Nota 2: " + nota2);
-        System.out.println("Nota 3: " + nota3);
-        System.out.println("Nota 4: " + nota4);
-        System.out.println("Média: " + notaMediaCom2Decimais);
+        System.out.println("         Aluno: " + nomeAluno);
+        System.out.println("         Nota 1: " + nota1);
+        System.out.println("         Nota 2: " + nota2);
+        System.out.println("         Nota 3: " + nota3);
+        System.out.println("         Nota 4: " + nota4);
         System.out.println(" ");
         System.out.println("******************************");
         System.out.println(" ");
-        System.out.println("Situação: " + situacao);
-
+        System.out.println("Média do aluno(a): " + notaMediaCom2Decimais);
+        System.out.println("Situação: O(a) aluno(a) " + nomeAluno + " está " + situacao);
     }
 }
